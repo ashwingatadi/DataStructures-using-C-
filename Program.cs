@@ -13,13 +13,18 @@ namespace DataStructures
             string[] arr_temp = Console.ReadLine().Split(' ');
             int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
             int length = arr.Length;
-            SortingAlgorithms sort = new SortingAlgorithms();
 
+            /* UnComment below two lines to sort using Selection Sort */
+            //SelectionSort selection_sort = new SelectionSort();
+            //selection_sort.Sort(ref arr, length);
 
-            //sort.SelectionSort(ref arr, length);
-            //sort.BubbleSort(ref arr, length);
-            sort.InsertionSort(ref arr, length);
+            /* UnComment below two lines to sort using Bubble Sort */
+            //BubbleSort bubble_sort = new BubbleSort();
+            //bubble_sort.Sort(ref arr, length);
 
+            /* UnComment below two lines to sort using Insertion Sort */
+            //InsertionSort insertion_sort = new InsertionSort();
+            //insertion_sort.Sort(ref arr, length);
 
             Console.WriteLine(string.Join(" ", arr));
             Console.ReadLine();
