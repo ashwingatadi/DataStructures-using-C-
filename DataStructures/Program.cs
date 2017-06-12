@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace DataStructures
+namespace SortingAlgorithms
 {
     class Program
     {

@@ -1,2 +1,6 @@
-bin/
-obj/
+DataStructures/bin/
+DataStructures/obj/
+LinkedList/bin/
+LinkedList/obj/
+.vs/
+DataStructures.sln
