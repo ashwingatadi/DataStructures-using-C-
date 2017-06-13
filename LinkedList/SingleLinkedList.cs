@@ -129,9 +129,11 @@ namespace LinkedList
             //Console.WriteLine("Before Reversing the linked list the array is as follows");
             //PrintList(head);
             //head = ReverseUsingIterativeMethod(head);
+            head = ReverseUsingResursion(head);
             //Console.WriteLine("After Reversing the linked list the array is as follows");
-            //PrintList(head);
-            PrintForwardLinkedListRecursion(head);
+            PrintList(head);
+
+            //PrintForwardLinkedListRecursion(head);
             //PrintReverseLinkedListRecursion(head);
         }
 
@@ -151,9 +153,27 @@ namespace LinkedList
             return head;
         }
 
+        Node globalHead = new Node();
+        private Node ReverseUsingResursion(Node head)
+        {
+            if (head == null) return globalHead;
+
+            if (head.Next == null)
+            {
+                globalHead = head;
+                return globalHead;
+            }
+
+            ReverseUsingResursion(head.Next);
+            head.Next.Next = head;
+            head.Next = null;
+            return globalHead;
+        }
+
         private void PrintForwardLinkedListRecursion(Node head)
         {
-            if (head == null) {
+            if (head == null)
+            {
                 return;
             }
             Node node = head;
