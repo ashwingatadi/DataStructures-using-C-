@@ -131,7 +131,8 @@ namespace LinkedList
             //head = ReverseUsingIterativeMethod(head);
             //Console.WriteLine("After Reversing the linked list the array is as follows");
             //PrintList(head);
-            PrintForwardLinkedListRecursive(head);
+            PrintForwardLinkedListRecursion(head);
+            //PrintReverseLinkedListRecursion(head);
         }
 
         private Node ReverseUsingIterativeMethod(Node head)
@@ -169,8 +170,10 @@ namespace LinkedList
             }
             Node node = head;
             head = head.Next;
-            PrintForwardLinkedListRecursion(head);
+
+            PrintReverseLinkedListRecursion(head);
             Console.Write(node.Data + " ");
+
         }
 
     }
