@@ -2,5 +2,7 @@ DataStructures/bin/
 DataStructures/obj/
 LinkedList/bin/
 LinkedList/obj/
+DoublyLinkedList/bin/
+DoublyLinkedList/obj/
 .vs/
 DataStructures.sln
