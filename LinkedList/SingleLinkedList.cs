@@ -103,6 +103,7 @@ namespace LinkedList
             return head;
 
         }
+
         public void DeleteTheNodes()
         {
             Node head = InitializeNodes();
@@ -111,7 +112,7 @@ namespace LinkedList
 
         }
 
-        public Node DeleteNthNode(Node head, int position)
+        private Node DeleteNthNode(Node head, int position)
         {
             Node node = head;
             for (int i = 1; i < position - 1; i++)
