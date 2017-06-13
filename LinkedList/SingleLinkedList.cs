@@ -123,5 +123,55 @@ namespace LinkedList
             return head;
         }
 
+        public void ReverseTheLinkedList()
+        {
+            Node head = InitializeNodes();
+            //Console.WriteLine("Before Reversing the linked list the array is as follows");
+            //PrintList(head);
+            //head = ReverseUsingIterativeMethod(head);
+            //Console.WriteLine("After Reversing the linked list the array is as follows");
+            //PrintList(head);
+            PrintForwardLinkedListRecursive(head);
+        }
+
+        private Node ReverseUsingIterativeMethod(Node head)
+        {
+            Node current = head;
+            Node next = null;
+            Node prev = null;
+            while (current != null)
+            {
+                next = current.Next;
+                current.Next = prev;
+                prev = current;
+                current = next;
+            }
+            head = prev;
+            return head;
+        }
+
+        private void PrintForwardLinkedListRecursion(Node head)
+        {
+            if (head == null) {
+                return;
+            }
+            Node node = head;
+            head = head.Next;
+            Console.Write(node.Data + " ");
+            PrintForwardLinkedListRecursion(head);
+        }
+
+        private void PrintReverseLinkedListRecursion(Node head)
+        {
+            if (head == null)
+            {
+                return;
+            }
+            Node node = head;
+            head = head.Next;
+            PrintForwardLinkedListRecursion(head);
+            Console.Write(node.Data + " ");
+        }
+
     }
 }

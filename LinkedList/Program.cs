@@ -13,7 +13,8 @@ namespace LinkedList
             SingleLinkedList sll = new SingleLinkedList();
             //sll.InsertingTheNodes();
 
-            sll.DeleteTheNodes();
+            //sll.DeleteTheNodes();
+            sll.ReverseTheLinkedList();
             Console.ReadLine();
         }
 
