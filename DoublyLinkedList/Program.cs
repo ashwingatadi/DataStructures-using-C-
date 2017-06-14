@@ -10,6 +10,10 @@ namespace DoublyLinkedList
     {
         static void Main(string[] args)
         {
+            DoublyLinkedList dll = new DoublyLinkedList();
+
+            dll.InsertingTheNodes();
+            Console.ReadLine();
         }
     }
 }

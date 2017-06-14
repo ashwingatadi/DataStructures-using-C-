@@ -17,7 +17,7 @@ namespace LinkedList
             {
                 Console.WriteLine("Please enter the number");
                 int num = int.Parse(Console.ReadLine());
-                //head = InsertToTheBeginingOfLinkedList(head, num);
+                head = InsertToTheBeginingOfLinkedList(head, num);
                 head = InsertToTheEndOfLinkedList(head, num);
                 PrintList(head);
             }
