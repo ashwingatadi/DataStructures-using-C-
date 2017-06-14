@@ -17,7 +17,9 @@ namespace DoublyLinkedList
             {
                 Console.WriteLine("Please enter the number");
                 int num = int.Parse(Console.ReadLine());
-                head = InsertToTheBeginingOfLinkedList(head, num);
+                //head = InsertToTheBeginingOfLinkedList(head, num);
+                head = InsertToTheEndOfLinkedList(head, num);
+                
                 PrintList(head);
             }
             Console.WriteLine("After inserting number 5 at position at 2");
@@ -45,6 +47,30 @@ namespace DoublyLinkedList
             } 
             node.Next = head;
             return node;
+        }
+
+        private Node InsertToTheEndOfLinkedList(Node head, int num)
+        {
+            Node node = head;
+            if (head == null)
+            {
+                head = new Node();
+                head.Data = num;
+                return head;
+            }
+            else {
+                while (head.Next != null) {
+                    head = head.Next;
+                }
+                Node newNode = new Node();
+                newNode.Data = num;
+                head.Next = newNode;
+                newNode.Prev = head;
+                return node;
+
+            }
+          
+           
         }
 
     }
